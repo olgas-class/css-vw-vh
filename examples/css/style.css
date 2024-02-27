@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  z-index: 9999;
+}
+
+.navigation {
+  display: flex;
+  gap: 20px;
+}
+
+.navigation a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid black;
+  text-decoration: none;
+}
+
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  border: 15px solid white
+}
+
+.blue-section {
+  background-color: lightskyblue;
+  background-image: url(../img/milano.jpg);
+}
+
+.red-section {
+  background-color: lightcoral;
+  background-image: url(../img/napoli.png);
+}
+
+.green-section {
+  background-color: lightgreen;
+  background-image: url(../img/roma.jpg);
+}
+
+section h2 {
+  /* Centratura con absolute */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 2;
+  font-size: 5rem;
+  color: white;
+}
+
+/* Tecnica di overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0, 0.4);
+  z-index: 1;
+}
